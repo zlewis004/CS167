@@ -13,7 +13,7 @@
 it creates a directory with the name of the -DartifactId value
 
 - ***(Q2) What do you see at the console output when you run the `java` command?***
-
+Hello World!
 
 - ***(Q3) Which of the following is the right way to call the `IsEven` function?***
 
