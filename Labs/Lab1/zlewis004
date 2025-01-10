@@ -10,7 +10,7 @@
 ## Answers
 
 - ***(Q1) What is the name of the directory that `mvn archectype:generate` command creates?***
-
+it creates a directory with the name of the -DartifactId value
 
 - ***(Q2) What do you see at the console output when you run the `java` command?***
 
