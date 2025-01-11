@@ -26,3 +26,4 @@ the third option is right.
 No, the program did not compile.
 
 - ***(Q5) If your answer to (Q4) is No, what is the error message you get?***
+Variable used in lambda expression should be final or effectively final
