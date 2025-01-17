@@ -12,6 +12,8 @@
 * (Q1) Copy the output of the command `hdfs dfsadmin -report`.
 * 
 report: Malformed IPv6 address at index 8: hdfs://[namenode]:9000
+Usage: hdfs dfsadmin [-report] [-live] [-dead] [-decommissioning] [-enteringmaintenance] [-inmaintenance] [-slownodes]
+
 
 * (Q2) What is the total capacity of this cluster and how much of it is free? and how many live data nodes are there?
 
