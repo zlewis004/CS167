@@ -72,7 +72,8 @@ user    0m0.007s
 sys     0m1.964s
 
 * (Q7) How do the two numbers in (Q5) and (Q6) compare? (The running times of copying the file through your program and the operating system.) Explain IN YOUR OWN WORDS why you see these results.
-
+-The hadoop jar program has a faster real time but a slower user time because its more cpuintensive because it interacts with hadoop
+- cp command is more efficient in user time because it seems to be a more simple system
 * (Q8) Use your program to test the following cases and report the running time for each case.
 1) Copy a file from local file system to HDFS.
 2) Copy a file from HDFS to local file system.
