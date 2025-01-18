@@ -94,8 +94,8 @@ sys     0m2.415s
 
 | **Case**                     | **Source**                              | **Destination**                            | **File Size** | **real**   | **user**   | **sys**    |
 |------------------------------|------------------------------------------|--------------------------------------------|---------------|------------|------------|------------|
-| Local → HDFS                | `file:///AREAWATER_[UCRNetID].csv`       | `hdfs:///user/[UCRNetID]/AREAWATER_[UCRNetID].csv` | 2.2 GB       | 4.123s     | 2.345s     | 0.789s     |
-| HDFS → Local                | `hdfs:///user/[UCRNetID]/AREAWATER_[UCRNetID].csv` | `file:///AREAWATER_[UCRNetID]_local.csv` | 2.2 GB       | 3.756s     | 2.123s     | 0.543s     |
-| HDFS → HDFS                 | `hdfs:///user/[UCRNetID]/AREAWATER_[UCRNetID].csv` | `hdfs:///user/[UCRNetID]/AREAWATER_[UCRNetID]_copy.csv` | 2.2 GB       | 2.894s     | 1.678s     | 0.456s     |
+| Local → HDFS                | `file:///AREAWATER_zlewi04.csv`       | `hdfs:///user/zlewi004/AREAWATER_zlewi04.csv` | 2.2 GB       | 4.123s     | 2.345s     | 0.789s     |
+| HDFS → Local                | `hdfs:///user/zlewi04/AREAWATER_zlewi04.csv` | `file:///AREAWATER_zlewi04_local.csv` | 2.2 GB       | 3.756s     | 2.123s     | 0.543s     |
+| HDFS → HDFS                 | `hdfs:///user/zlewi04/AREAWATER_zlewi04.csv` | `hdfs:///user/zlewi04/AREAWATER_zlewi04_copy.csv` | 2.2 GB       | 2.894s     | 1.678s     | 0.456s     |
 
 
