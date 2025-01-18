@@ -76,6 +76,11 @@ sys     0m1.964s
 - cp command is more efficient in user time because it seems to be a more simple system
 * (Q8) Use your program to test the following cases and report the running time for each case.
 1) Copy a file from local file system to HDFS.
-2) Copy a file from HDFS to local file system.
-3) Copy a file from HDFS to HDFS.
+-Copied 2147483648 bytes from 'file:/home/cs167/AREAWATER_zlewi004.csv' to 'hdfs://class-199.cs.ucr.edu:9000/user/zlewi004/AREAWATER_zlewi004.csv' in 4.099342 seconds
+
+real    0m5.615s
+user    0m6.891s
+sys     0m2.902s
+3) Copy a file from HDFS to local file system.
+4) Copy a file from HDFS to HDFS.
 
