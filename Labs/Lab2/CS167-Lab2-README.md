@@ -67,6 +67,10 @@ sys     0m0.254s
 2.2GB
 * (Q6) Report the running time of the cp command.
 
+real    0m1.996s
+user    0m0.007s
+sys     0m1.964s
+
 * (Q7) How do the two numbers in (Q5) and (Q6) compare? (The running times of copying the file through your program and the operating system.) Explain IN YOUR OWN WORDS why you see these results.
 
 * (Q8) Use your program to test the following cases and report the running time for each case.
