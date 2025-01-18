@@ -88,4 +88,6 @@ real    0m5.395s
 user    0m4.284s
 sys     0m3.234s
 4) Copy a file from HDFS to HDFS.
-
+real    0m7.156s
+user    0m7.406s
+sys     0m2.415s
