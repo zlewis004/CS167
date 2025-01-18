@@ -82,5 +82,10 @@ real    0m5.615s
 user    0m6.891s
 sys     0m2.902s
 3) Copy a file from HDFS to local file system.
+-cs167@class-199:~$ time hdfs dfs -get /user/zlewi004/AREAWATER_zlewi004.csv AREAWATER_zlewi004_local.csv
+
+real    0m5.395s
+user    0m4.284s
+sys     0m3.234s
 4) Copy a file from HDFS to HDFS.
 
