@@ -54,6 +54,8 @@ Present Capacity: 177769771008 (165.56 GB)
 1 live datanode
 
 * (Q3) What is the output of the command `hdfs dfs -ls` after you copied the text file?
+Found 1 items
+-rw-r--r--   3 cs167 supergroup          0 2025-01-17 16:13 zlewi004.txt
 
 * (Q4) Does the program run after you change the default file system to HDFS? What is the error message, if any, that you get?
 
