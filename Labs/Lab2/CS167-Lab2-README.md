@@ -58,9 +58,13 @@ Found 1 items
 -rw-r--r--   3 cs167 supergroup          0 2025-01-17 16:13 zlewi004.txt
 
 * (Q4) Does the program run after you change the default file system to HDFS? What is the error message, if any, that you get?
+Input file 'AWATER_zlewi004.csv' does not exist!
 
 * (Q5) Verify the copied file (`copy.csv`) size and report the running time.
-
+real    0m1.533s
+user    0m2.954s
+sys     0m0.254s
+2.2GB
 * (Q6) Report the running time of the cp command.
 
 * (Q7) How do the two numbers in (Q5) and (Q6) compare? (The running times of copying the file through your program and the operating system.) Explain IN YOUR OWN WORDS why you see these results.
