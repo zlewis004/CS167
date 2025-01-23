@@ -10,7 +10,7 @@
 ## Answers
 
 1. ***(Q1) Compare `bytesRead` and `length`, are they equal? Use one sentance to explain why.***
-
+bytes head and length are not equal because the entier lines are read, which may include additional bytes beyond length passed in args. They are inly equal in test.txt 3 4 because it reads lol which has 3 characters +1 new line which is 4 bytes read.
 
 
 2. ***(Q2) Copy the output of this command.***
