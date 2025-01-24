@@ -133,7 +133,9 @@ Num of Blocks: 69
 
 
 7. ***(Q7) Include the output of the three cases above in your README file.***
-
+Split length: 1000
+Actual bytes read: 1055
+Number of matching lines: 12
 
   | offset | length | bytesRead  | numMatchingLines |
   | ------ | ------ | ---------- | ---------------- |
