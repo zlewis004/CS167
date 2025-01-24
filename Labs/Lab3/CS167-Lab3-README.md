@@ -1,11 +1,11 @@
 # Lab 3
-
+---5th partner didnt show to finish lab next day
 ## Student information
 
-* Full name:
-* E-mail:
-* UCR NetID:
-* Student ID:
+* Full name: Zaniah Lewis
+* E-mail: zlewi004@ucr.edu
+* UCR NetID:zlewi004
+* Student ID: 862244139
 
 ## Answers
 
@@ -116,29 +116,27 @@ Last Block Report: Thu Jan 23 15:14:53 PST 2025
 Num of Blocks: 69
 
 3. ***(Q3) How many live datanodes are in this cluster?***
-4
-
+-3 live datanodes
+-one partner didnt come the day after lab to finish so we have 4 members
 
 4. ***(Q4) How many replicas are stored on the namenode? How many replicas are stored in the datanodes?***
-
+-0 for namenode an 3 for each datanode. 17 blocks per datanode with 51 total blocks
 
 
 5. ***(Q5) How many replicas are stored on the datanode uploading the file? How many replicas are stored across other datanodes?***
-
+1 replica stored on the datanode and 3 stored across with a total of 68 blocks, including orignial 17stored on uploading datanode and last 34 distributed across the two other datanodes. total 51 blocks across all three nodes
 
 
 
 6. ***(Q6) Compare your results of Q4 and Q5, give one sentence to explain the results you obtained.***
-
+the results show the namenode  doesnt store replicas and the datanodes each store 3
 
 
 7. ***(Q7) Include the output of the three cases above in your README file.***
-Split length: 1000
-Actual bytes read: 1055
-Number of matching lines: 12
+
 
   | offset | length | bytesRead  | numMatchingLines |
   | ------ | ------ | ---------- | ---------------- |
-  | 500    | 1000   |            |                  |
-  | 12000  | 1000   |            |                  |
-  | 100095 | 1000   |            |                  |
+  | 500    | 1000   |   1055     |        11          |
+  | 12000  | 1000   |   1050     |          13        |
+  | 100095 | 1000   |    1060    |            10      |
