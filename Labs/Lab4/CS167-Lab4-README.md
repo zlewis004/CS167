@@ -14,6 +14,7 @@
 * (Q2) What is the effect of the line `job.setNumReduceTasks(0);`?
 
 * (Q4) How many lines do you see in the output?
+* 27872
 
 * (Q5) How many files are produced in the output?
 
