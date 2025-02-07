@@ -36,7 +36,7 @@ In stage 1.0: 98 ms and 1272 ms
   18:46:29.724 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 1.0 (TID 3) in 1272 ms on 169.235.31.133 (executor 0) (2/2)
   
 * (Q6) For the previous command that counts the lines and prints the output, how many tasks in total were generated?
-* 5 tasks
+* 6 tasks
 8:56:15.627 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 0.0 (TID 0) in 1310 ms on 169.235.28.199 (executor 2) (1/2)
   18:56:15.628 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 0.0 (TID 1) in 1294 ms on 169.235.28.199 (executor 2) (2/2)
   18:56:15.797 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 1.0 (TID 2) in 114 ms on 169.235.28.199 (executor 2) (1/2)
@@ -45,7 +45,7 @@ In stage 1.0: 98 ms and 1272 ms
   18:56:18.531 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 2.0 (TID 5) in 1588 ms on 169.235.31.133 (executor 0) (2/2)
   
 * (Q7) Compare this number to the one you got earlier.
-*   another task was added
+*  2 tasks were added
   
 * (Q8) Explain why we get these numbers.
 * the numbers are different because aggregation adds an the extra stage and therefore extra tasks.
