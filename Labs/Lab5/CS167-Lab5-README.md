@@ -45,18 +45,17 @@ In stage 1.0: 98 ms and 1272 ms
   18:56:18.531 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 2.0 (TID 5) in 1588 ms on 169.235.31.133 (executor 0) (2/2)
   
 * (Q7) Compare this number to the one you got earlier.
-  another task was added
+*   another task was added
   
 * (Q8) Explain why we get these numbers.
-the numbers are different because aggregation adds an the extra stage and therefore extra tasks.
+* the numbers are different because aggregation adds an the extra stage and therefore extra tasks.
 
 * (Q9) What can you do to the current code to ensure that the file is read only once?
 To ensure that the file is read only once, you can add the cache funtion after the log file.
 
-* (Q10) How many stages does your program have, and what are the steps in each stage? 
-it has two stages. 3 steps in stage 0 and 1 step in stage 1.
+* (Q10) How many stages does your program have, and what are the steps in each stage?
+* it has two stages. 3 steps in stage 0 and 1 step in stage 1.
 
 * (Q11) Why does your program have two stages?
-* 
-the program has two stages because the aggregation (reduce) operation that computes the final count forces Spark to break the job into a stage for reading and filtering the data (map phase), and a stage for aggregating the per-partition results (reduce phase).
+* the program has two stages because the aggregation (reduce) operation that computes the final count forces Spark to break the job into a stage for reading and filtering the data (map phase), and a stage for aggregating the per-partition results (reduce phase).
 * 
