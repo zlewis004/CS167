@@ -54,5 +54,7 @@ the numbers are different because aggregation adds an the extra stage and theref
 To ensure that the file is read only once, you can add the cache funtion after the log file.
 
 * (Q10) How many stages does your program have, and what are the steps in each stage? 
-it has two stages
+it has two stages. 3 steps in stage 0 and 1 step in stage 1.
 * (Q11) Why does your program have two stages?
+the program has two stages because the aggregation (reduce) operation that computes the final count forces Spark to break the job into a stage for reading and filtering the data (map phase), and a stage for aggregating the per-partition results (reduce phase).
+* 
