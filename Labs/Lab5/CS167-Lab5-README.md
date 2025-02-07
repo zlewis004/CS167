@@ -46,6 +46,7 @@ In stage 1.0: 98 ms and 1272 ms
   
 * (Q7) Compare this number to the one you got earlier.
   another task was added
+  
 * (Q8) Explain why we get these numbers.
 the numbers are different because aggregation adds an the extra stage and therefore extra tasks.
 
