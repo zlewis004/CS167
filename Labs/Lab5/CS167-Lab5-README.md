@@ -54,5 +54,5 @@ the numbers are different because aggregation adds an the extra stage and theref
 To ensure that the file is read only once, you can add the cache funtion after the log file.
 
 * (Q10) How many stages does your program have, and what are the steps in each stage? 
-
+it has two stages
 * (Q11) Why does your program have two stages?
