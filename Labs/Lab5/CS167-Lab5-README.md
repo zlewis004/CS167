@@ -12,7 +12,7 @@
 * (Q1) Do you think it will use your local cluster? Why or why not?
 i do not think it will use my cluster in because the web interface doesnt use anything at that time.
 * (Q2) Does the application use the cluster that you started? How did you find out?
-yes. 
+* yes. we can see it when looking at the image
 ![Screenshot_2025-02-06_195100](https://github.com/user-attachments/assets/cf3d1ea3-f9fc-4298-9dca-6979963e4149)
 
 * (Q3) What is the Spark master printed on the standard output on IntelliJ IDEA?
