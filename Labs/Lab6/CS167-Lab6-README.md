@@ -14,7 +14,9 @@
     val inputfile: String = args(1)
 
 * (Q2) What is the type of the attributes `time` and `bytes` this time? Why?
-
+ |-- time: string (nullable = true)
+|-- bytes: string (nullable = true)
+comment the line option("inferSchema", "true") makes all columns default to string.
 
 * (Q3) How many jobs does your program have? List them here, and describe what each job is performing.
 
