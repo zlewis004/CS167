@@ -2,15 +2,16 @@
 
 ## Student information
 
-* Full name:
-* E-mail:
-* UCR NetID:
-* Student ID:
+* Full name: Zaniah Lewis
+* E-mail: zlewi004@UCR.EDU
+* UCR NetID: zlewi004
+* Student ID: zlewi004
 
 ## Answers
 
 * (Q1) What are these two arguments?
-
+    command: String = args(0)
+    val inputfile: String = args(1)
 
 * (Q2) What is the type of the attributes `time` and `bytes` this time? Why?
 
