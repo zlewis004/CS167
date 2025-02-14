@@ -30,6 +30,8 @@ Job 2: collect at App.scala:83
 
 
 * (Q4) How many stages does your program have? Why does it have two stages for the countByKey job?
+-6 completed stages (plus 1 skipped)
+<img width="849" alt="Screenshot 2025-02-13 at 7 52 40 PM" src="https://github.com/user-attachments/assets/cb165b85-a231-4b1a-9d9d-114ad753d6f2" />
 
 
 * (Q5) What are the longest two stages? Why do you think they are the longest?
