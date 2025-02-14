@@ -19,7 +19,13 @@
 comment the line option("inferSchema", "true") makes all columns default to string.
 
 * (Q3) How many jobs does your program have? List them here, and describe what each job is performing.
-6 jobs
+3 jobs
+  job 0: countByKey at App.scala:78
+  -calls countByKey(). Spark must read and partially aggregate the RDD data, then shuffle to combine counts by key.
+Job 1: sortByKey at App.scala:83
+-calls sortByKey() on the resulting pair RDD to sort the results by the response code
+Job 2: collect at App.scala:83
+-calls .collect(), which gathers the sorted results back to the driver.
 <img width="1440" alt="Screenshot_2025-02-13_at_7 38 03_PM" src="https://github.com/user-attachments/assets/535db1e4-d8a9-4d92-8556-3576dd346428" />
 
 
