@@ -33,15 +33,21 @@ Job 2: collect at App.scala:83
 -6 completed stages (plus 1 skipped)
 <img width="849" alt="Screenshot 2025-02-13 at 7 52 40 PM" src="https://github.com/user-attachments/assets/cb165b85-a231-4b1a-9d9d-114ad753d6f2" />
 
-
 * (Q5) What are the longest two stages? Why do you think they are the longest?
 Stage 2 map at App.scala:63 took about 6 seconds making it the longest
-- possibly because its performing an intensive transformation
-
 Stage 0 countByKey at App.scala:78 took about 3 seconds
-
+- possibly because its performing an intensive transformation for countbykey
 * (Q6) Copy the output of the command including the code, and Avg(bytes) table, as well as the runtime.
-
+Average bytes per code for the file 'nasa_19950630.22-19950728.12_zlewi004.tsv'
+Code,Avg(bytes)
+200,22739.652244386536
+302,79.0597341807485
+304,0.0
+403,0.0
+404,0.0
+500,0.0
+501,0.0
+Command 'avg-bytes-by-code' on file 'nasa_19950630.22-19950728.12_zlewi004.tsv' finished in 10.138749469 seconds
 
 * (Q7) How many jobs does your program have? List them here, and describe how they compare to the previous program.
 
