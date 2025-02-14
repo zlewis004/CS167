@@ -50,6 +50,7 @@ Code,Avg(bytes)
 Command 'avg-bytes-by-code' on file 'nasa_19950630.22-19950728.12_zlewi004.tsv' finished in 10.138749469 seconds
 
 * (Q7) How many jobs does your program have? List them here, and describe how they compare to the previous program.
+![image](https://github.com/user-attachments/assets/01933737-76d5-44f0-beb9-bf241311a678)
 
 
 
