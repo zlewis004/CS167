@@ -35,7 +35,10 @@ Job 2: collect at App.scala:83
 
 
 * (Q5) What are the longest two stages? Why do you think they are the longest?
+Stage 2 map at App.scala:63 took about 6 seconds making it the longest
+- possibly because its performing an intensive transformation
 
+Stage 0 countByKey at App.scala:78 took about 3 seconds
 
 * (Q6) Copy the output of the command including the code, and Avg(bytes) table, as well as the runtime.
 
