@@ -19,6 +19,8 @@
 comment the line option("inferSchema", "true") makes all columns default to string.
 
 * (Q3) How many jobs does your program have? List them here, and describe what each job is performing.
+6 jobs
+https://cdn.discordapp.com/attachments/1338593553718448241/1339802844211052657/Screenshot_2025-02-13_at_7.38.03_PM.png?ex=67b00c22&is=67aebaa2&hm=04fa2a545a976b2664f9c364ed61fcc154adbc2c2621ad3358e3ce83a80c459c&
 
 
 * (Q4) How many stages does your program have? Why does it have two stages for the countByKey job?
