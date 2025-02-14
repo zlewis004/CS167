@@ -65,6 +65,29 @@ Job 5: collect at AppSQL.scala:61 –collection action
 ![image](https://github.com/user-attachments/assets/ed1fbadf-5699-4833-85df-efb664ea5a2a)
 Completed stages: 6
 Skipped stages: 4
+the APP.scala seems to be slower and this maybe due to the stages being skipped because theyre reusing computations.
 
 * (Q9) Visit this link [http://localhost:4040/SQL](http://localhost:4040/SQL), on that page click on the `collect at AppSQL`. Observe the graph which represents how your query was processed. Then, scroll to the end of bottom of the page, and click on `> Details`. You will notice two parts `+- == Final Plan ==` and `+- == Initial Plan ==`. Copy those plans here, and discuss. Which plan is longer and more complicated? Which plan do you think is more optimal?
+* -The Initial Plan is shorter but less optimized.
+* -Final Plan is more detailed and slightly longer
+    * -introduces AQEShuffleRead and ShuffleQueryStage,
+    * -Final Plan is more optimal
++- == Final Plan ==
+   * Sort (10)
+   +- AQEShuffleRead (9)
+      +- ShuffleQueryStage (8), Statistics(sizeInBytes=128.0 B, rowCount=4)
+         +- Exchange (7)
+            +- * HashAggregate (6)
+               +- AQEShuffleRead (5)
+                  +- ShuffleQueryStage (4), Statistics(sizeInBytes=160.0 B, rowCount=4)
+                     +- Exchange (3)
+                        +- * HashAggregate (2)
+                           +- Scan csv  (1)
++- == Initial Plan ==
+   Sort (15)
+   +- Exchange (14)
+      +- HashAggregate (13)
+         +- Exchange (12)
+            +- HashAggregate (11)
+               +- Scan csv  (1)
 
