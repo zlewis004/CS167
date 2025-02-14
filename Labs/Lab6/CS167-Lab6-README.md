@@ -50,12 +50,21 @@ Code,Avg(bytes)
 Command 'avg-bytes-by-code' on file 'nasa_19950630.22-19950728.12_zlewi004.tsv' finished in 10.138749469 seconds
 
 * (Q7) How many jobs does your program have? List them here, and describe how they compare to the previous program.
+* previous program had 3 jobs
+* executes multiple collect() calls,
 ![image](https://github.com/user-attachments/assets/01933737-76d5-44f0-beb9-bf241311a678)
-
+job 0: load at AppSQL.scala:28 –loads the dataset into a Spark DataFrame.
+Job 1: show at AppSQL.scala:29 – a sample of the dataset, triggering a Spark action.
+Job 2: collect at AppSQL.scala:61 – collecting results.
+Job 3: collect at AppSQL.scala:61 –collect() call on DataFrame.
+Job 4: collect at AppSQL.scala:61 –collection of results.
+Job 5: collect at AppSQL.scala:61 –collection action
 
 
 * (Q8) How many stages does your program have? How did the number of stages affect the run time? Is this program slower or faster?
-
+![image](https://github.com/user-attachments/assets/ed1fbadf-5699-4833-85df-efb664ea5a2a)
+Completed stages: 6
+Skipped stages: 4
 
 * (Q9) Visit this link [http://localhost:4040/SQL](http://localhost:4040/SQL), on that page click on the `collect at AppSQL`. Observe the graph which represents how your query was processed. Then, scroll to the end of bottom of the page, and click on `> Details`. You will notice two parts `+- == Final Plan ==` and `+- == Initial Plan ==`. Copy those plans here, and discuss. Which plan is longer and more complicated? Which plan do you think is more optimal?
 
