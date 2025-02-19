@@ -12,6 +12,24 @@
 * (Q1) What is the schema of the file? Copy it to the README file and keep it for your reference.
 
     ```
+[Stage 0:>
+root                                 
+ |-- hashtags: array (nullable = true)
+ |    |-- element: string (containsNull = true)
+ |-- id: long (nullable = true)
+ |-- lang: string (nullable = true)
+ |-- place: struct (nullable = true)
+ |    |-- country_code: string (nullable = true)
+ |    |-- name: string (nullable = true)
+ |    |-- place_type: string (nullable = true)
+ |-- text: string (nullable = true)
+ |-- time: string (nullable = true)
+ |-- user: struct (nullable = true)
+ |    |-- followers_count: long (nullable = true)
+ |    |-- statuses_count: long (nullable = true)
+ |    |-- user_id: long (nullable = true)
+ |    |-- user_name: string (nullable = true)
+
     ```
 
 * (Q2) What is your command to import the `tweets.json` file?
