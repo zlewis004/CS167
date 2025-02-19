@@ -37,9 +37,7 @@ root
   
 
 * (Q3) What is the output of the import command?
-
-    ```text
-    # 2025-02-19T14:51:29.015-0800    connected t
+ 2025-02-19T14:51:29.015-0800    connected t
 o: mongodb://localhost/                    2025-02-19T14:51:29.074-0800    1000 docume
 nt(s) imported successfully. 0 document(s) failed to import.                          
     ```
