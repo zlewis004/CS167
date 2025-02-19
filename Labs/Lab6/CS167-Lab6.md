@@ -110,8 +110,9 @@ This part will be done on your `local` machine.
 
 4. Run the main function in `App` class in IntelliJ IDEA to make sure it works. You should see your program `exit with code 0` (normal exit). 
 In addition, in your local machine command line, go to your `[UCRNetID_lab6]` directory and type `mvn package` to make sure your project can generate a `.jar` file.
+   * Note: You do not need to download Scala SDK. Reload your `pom.xml` to download dependencies for scala.
 
-5. This Lab requires you to implement multiple functionalities: `count-all`, `time-filter`, and `avg-bytes-by-code`. Therefore, it is recommanded to `setup all configurations inadvance`. You can refer to [here](#intellij-configurations) for how to do this.
+6. This Lab requires you to implement multiple functionalities: `count-all`, `time-filter`, and `avg-bytes-by-code`. Therefore, it is recommanded to `setup all configurations inadvance`. You can refer to [here](#intellij-configurations) for how to do this.
 
 ---
 
@@ -609,9 +610,9 @@ In this part, we will run the part the computes the `avg-bytes-by-code` using bo
 
 ### I. Start an HDFS and Spark Clusters (5 minutes)
 
-1. Start an HDFS cluster with your group, refer to [Lab 3](../Lab1/CS167-Lab3.md). for instructions.
+1. Start an HDFS cluster with your group, refer to [Lab 3](../Lab3/CS167-Lab3.md). for instructions.
 
-2. Start a Spark cluster with your group, refer to [Lab 5](../Lab1/CS167-Lab5.md). for instructions.
+2. Start a Spark cluster with your group, refer to [Lab 5](../Lab5/CS167-Lab5.md). for instructions.
 
 3. Make the user folder in HDFS is initialized and contains the file `nasa_19950630.22-19950728.12_[UCRNet_ID].tsv`
 
@@ -703,8 +704,7 @@ Hint: Add `2>/dev/null` to the end of each command to hide logging information f
 11. Click the `Add Configuration...` button next to the green hammer icon.
     ![Add configuration](images/idea-add-config.png)
 
-12. You shall see `Application` folder in the left panel. Expand it, you shall see `App` and `AppSQL` two folders. Expand them, and you shall see all the 15 configurations.
-    ![Debug configuration](images/run-debug-config.png)
+12. You shall see `Application` folder in the left panel. Expand it, you shall see `App` and `AppSQL` two folders. Expand them, and you shall see all the 6 configurations (3 for App, and 3 for AppSQL).
 
 13. You can now select a configuration, but be sure to click the green triangle icon to run the current selected configuration.
     [Run config](images/run-config.png)
