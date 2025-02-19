@@ -32,9 +32,9 @@ root
  ```
 
 * (Q2) What is your command to import the `tweets.json` file?
+  `
   mongoimport --db cs167 --collection tweets --file tweets.json
-  
-
+  `
 * (Q3) What is the output of the import command?
  ```
 2025-02-19T14:51:29.015-0800    connected t
