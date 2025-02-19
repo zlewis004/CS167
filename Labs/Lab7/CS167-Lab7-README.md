@@ -35,7 +35,7 @@ root
 * (Q2) What is your command to import the `tweets.json` file?
 
     ```shell
-    # Replace here
+    # mongoimport --db cs167 --collection tweets --file tweets.json
     ```
 
 * (Q3) What is the output of the import command?
