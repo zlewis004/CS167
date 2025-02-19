@@ -11,7 +11,7 @@
 
 * (Q1) What is the schema of the file? Copy it to the README file and keep it for your reference.
 
-    ```
+```
 [Stage 0:>
 root                                 
  |-- hashtags: array (nullable = true)
@@ -29,8 +29,7 @@ root
  |    |-- statuses_count: long (nullable = true)
  |    |-- user_id: long (nullable = true)
  |    |-- user_name: string (nullable = true)
-
-    ```
+ ```
 
 * (Q2) What is your command to import the `tweets.json` file?
   mongoimport --db cs167 --collection tweets --file tweets.json
