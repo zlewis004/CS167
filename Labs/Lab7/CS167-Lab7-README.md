@@ -41,7 +41,9 @@ root
 * (Q3) What is the output of the import command?
 
     ```text
-    # Replace here
+    # 2025-02-19T14:51:29.015-0800    connected t
+o: mongodb://localhost/                    2025-02-19T14:51:29.074-0800    1000 docume
+nt(s) imported successfully. 0 document(s) failed to import.                          
     ```
 
 * (Q4) What is your command to count the total number of records in the `tweets` collection and what is the output of the command?
