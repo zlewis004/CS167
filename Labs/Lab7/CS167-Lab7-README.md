@@ -32,6 +32,7 @@ root
  ```
 
 * (Q2) What is your command to import the `tweets.json` file?
+
   `
   mongoimport --db cs167 --collection tweets --file tweets.json
   `
