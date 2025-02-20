@@ -213,7 +213,8 @@ yes
     
 * (Q24) What's the running time of the second query? Comparing to Q23, it is faster or slower?
     ```text
-    // Replace here
+    // "executionTimeMillis": 3
+     -3 milliseconds
     ```
 
 * (Q25) What do winningPlan and COLLSCAN mean?
