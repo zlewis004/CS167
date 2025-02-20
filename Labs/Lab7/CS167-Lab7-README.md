@@ -83,7 +83,6 @@ nt(s) imported successfully. 0 document(s) failed to import.
 
 ```
 
-
 * (Q9) Does MongoDB accept this document while the followers_count field has a different type than other records?
 
 Yes, MongoDB Will Accept This Document.
@@ -91,12 +90,25 @@ Yes, MongoDB Will Accept This Document.
 * (Q10) What is your command to insert this record?
 
     ```javascript
-    // Replace here
+    // db.tweets.insertOne({id: Long('921633456941121354'), place: { country_code: 'JP', name: 'Japan', place_type: 'city' }, user: {user_name: 'xyz3', followers_count: {last_month: 550, this_month: 2200}, statuses_count: 112000}, hashtags: [ 'art', 'tour' ], lang: 'ja'
+... })
     ```
 
 
 * (Q11) Where did the two new records appear in the sort order?
 
+user name "xyz2" is the first in the list  for followers_count [2100, 5000]).
+user name "xyz3" is next, between the array [2100, 5000]
+
+[
+  { user: { user_name: 'xyz2', followers_count: [ 2100, 5000 ] } },
+  {
+    user: {
+      user_name: 'xyz3',
+      followers_count: { last_month: 550, this_month: 2200 }
+    }
+  }
+]
 
 * (Q12) Why did they appear at these specific locations?
 
