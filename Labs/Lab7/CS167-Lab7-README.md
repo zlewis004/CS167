@@ -86,6 +86,8 @@ nt(s) imported successfully. 0 document(s) failed to import.
 
 * (Q9) Does MongoDB accept this document while the followers_count field has a different type than other records?
 
+Yes, MongoDB Will Accept This Document.
+
 * (Q10) What is your command to insert this record?
 
     ```javascript
