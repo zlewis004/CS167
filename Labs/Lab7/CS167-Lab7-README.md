@@ -111,7 +111,7 @@ user name "xyz3" is next, between the array [2100, 5000]
 ]
 
 * (Q12) Why did they appear at these specific locations?
-
+because the first record is an array and the second one is an object
 
 * (Q13) Where did the two records appear in the ascending sort order? Explain your observation.
 
