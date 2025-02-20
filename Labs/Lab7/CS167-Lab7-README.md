@@ -146,13 +146,17 @@ yes
 * (Q17) What is your command for this query?
 
     ```javascript
-    // Replace here
+    // db.tweets.find(
+  { hashtags: { $in: ["job", "hiring", "IT"] } },
+  { text: 1, hashtags: 1, "user.user_name": 1, "user.followers_count": 1, _id: 0 }
+).sort({ "user.followers_count": 1 })
+
     ```
 
 * (Q18) How many records are returned from this query?
 
     ```
-    // Replace here
+    // 24
     ```
 
 * (Q19) What is your command for this query?
