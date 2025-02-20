@@ -46,13 +46,22 @@ nt(s) imported successfully. 0 document(s) failed to import.
 * (Q4) What is your command to count the total number of records in the `tweets` collection and what is the output of the command?
 
     ```javascript
-    // Replace here
+    db.tweets.countDocuments()
+    output says 10000
     ```
 
 * (Q5) What is your command for this query?
 
     ```javascript
-    // Replace here
+    //
+     db.tweets.find({ country_code: "JP", "user.statuses_count": { $gt: 50000 }},
+  {
+    "user.user_name": 1,
+    "user.followers_count": 1,
+    "user.statuses_count": 1,
+    _id: 0
+  }).sort({ "user.followers_count": 1 })
+
     ```
 
 * (Q6) How many records does your query return?
