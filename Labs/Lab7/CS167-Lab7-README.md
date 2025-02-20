@@ -115,19 +115,32 @@ because the first record is an array and the second one is an object
 
 * (Q13) Where did the two records appear in the ascending sort order? Explain your observation.
 
+user name "xyz3" { last_month: 550, this_month: 2200 }) appears first in ascending order.
+user name "xyz2" (array [2100, 5000]) appears last in ascending order.
+- In ascending order, objects come before arrays
+{
+    user: {
+      user_name: 'xyz3',
+      followers_count: { last_month: 550, this_month: 2200 }
+    }
+  },
+  { user: { user_name: 'xyz2', followers_count: [ 2100, 5000 ] } }
+]
 
 * (Q14) Is MongoDB able to build the index on that field with the different value types stored in the `user.followers_count` field?
+-user.followers_count_1
+yes
 
 
 * (Q15) What is your command for building the index?
 
     ```javascript
-    // Replace here
+    // db.tweets.createIndex({ "user.followers_count": 1 })
     ```
 
 * (Q16) What is the output of the create index command?
 
-    ```text
+    ```user.followers_count_1
     ```
 
 * (Q17) What is your command for this query?
