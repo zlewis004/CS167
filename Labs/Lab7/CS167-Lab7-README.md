@@ -219,17 +219,29 @@ yes
 
 * (Q25) What do winningPlan and COLLSCAN mean?
     ```text
-    // Replace here
+    // the “winning plan” is the most efficient for that specific query. collscan scan every document in the collection sequentially to find matches
     ```
 
 * (Q26) What is the winningPlan? Did your query use the text index?
     ```text
-    // Replace here
+query is using the text index
+    // winningPlan: {
+      isCached: false,
+      stage: 'TEXT_MATCH',
+      indexPrefix: {},
+      indexName: 'text_text',
+      parsedTextQuery: {
+        terms: [ 'happi' ],
+        negatedTerms: [],
+        phrases: [],
+        negatedPhrases: []
+      },
+     
     ```
 
 * (Q27) You may notice that the nReturned of your query does not match the regex query. Do some explornations and explain why.
     ```text
-    // Replace here
+    //the text search typically returns more documents than a strict regex
     ```
 
 
