@@ -161,27 +161,54 @@ yes
 
 * (Q19) What is your command for this query?
     ```javascript
-    // Replace here
+    // db.tweets.aggregate([
+  {
+    $group: {
+      _id: "$place.country_code",
+      tweets_count: { $sum: 1 }
+    }
+  },
+  { $sort: { tweets_count: -1 } },
+  { $limit: 5 },
+  {
+    $project: {
+      _id: 0,
+      country_code: "$_id",
+      tweets_count: 1
+    }
+  }
+]);
+
     ```
 
 * (Q20) What is the output of the command?
     ```javascript
-    // Replace here
+    //{ tweets_count: 153, country_code: 'US' },
+  { tweets_count: 107, country_code: 'JP' },
+  { tweets_count: 89, country_code: 'GB' },
+  { tweets_count: 65, country_code: 'TR' },
+  { tweets_count: 56, country_code: 'IN' }
     ```
 
 * (Q21) What is your command for this query?
     ```javascript
-    // Replace here
+    // db.tweets.aggregate([ { $unwind: "$hashtags" }, { $group: { _id: "$hashtags", count: { $sum: 1 } } }, { $sort: { count: -1 } }, { $limit: 5 }, { $project: { _id: 0, hashtag: "$_id", count: 1 } } ])
+
     ```
     
 * (Q22) What is the output of the command?
     ```javascript
-    // Replace here
+    // { count: 56, hashtag: 'ALDUBxEBLoveis' },
+  { count: 31, hashtag: 'LalOn' },
+  { count: 31, hashtag: 'no309' },
+  { count: 31, hashtag: 'FurkanPalalı' },
+  { count: 19, hashtag: 'job' }
     ```
     
 * (Q23) Are there any existing indexes? Explain your answer.
     ```text
-    // Replace here
+    // two indexes
+ one is the default _id index, and the other is the index we made on user.followers_count
     ```
     
 * (Q24) What's the running time of the second query? Comparing to Q23, it is faster or slower?
