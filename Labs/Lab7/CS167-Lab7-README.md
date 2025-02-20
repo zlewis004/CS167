@@ -65,18 +65,23 @@ nt(s) imported successfully. 0 document(s) failed to import.
     ```
 
 * (Q6) How many records does your query return?
+* 1000
 
 * (Q7) What is the command that retrieves the results without the _id field?
 
     ```javascript
-    // Replace here
+    // db.tweets.find({ country_code: "JP", "user.statuses_count": { $gt: 50000 } }, { "user.user_name": 1, "user.followers_count": 1, "user.statuses_count": 1, _id: 0 }).sort({ "user.followers_count": 1 })
+
     ```
 
 * (Q8) What is the command to insert the sample document? What is the result of running the command?
 
     ```javascript
-    // Replace here
-    ```
+    // db.tweets.insertOne({ id: NumberLong("921633456941125634"), place: { country_code: "JP", name: "Japan", place_type: "city" }, user: { user_name: "xyz2", followers_count: [2100, 5000], statuses_count: 55000 }, hashtags: ["nature"], lang: "ja" })
+     acknowledged: true,
+     insertedId: ObjectId('67b69db893ee5b49c6e43269')
+
+```
 
 
 * (Q9) Does MongoDB accept this document while the followers_count field has a different type than other records?
