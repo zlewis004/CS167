@@ -224,8 +224,49 @@ Operation top-lang on file 'tweets.json' finished in 0.9592505830000001 seconds
 
 
 * (Q13) What's the total size of `tweets.json` and `tweets.parquet` in HDFS?
+* cs167@class-199:~/cs167$  hdfs dfs -du -s -h tweets.json
+309.3 M  927.8 M  tweets.json
+cs167@class-199:~/cs167$  hdfs dfs -du -s -h tweets.parquet
+104.6 M  313.7 M  tweets.parquet
+cs167@class-199:~/cs167$ 
 
 * (Q14) Copy the output to this question. Which one runs faster? Explain why.
+
++------------+-----------+
+|country_code|tweet_count|
++------------+-----------+
+|          US|     196740|
+|          JP|     133690|
+|          GB|      65130|
+|          PH|      57320|
+|          BR|      44570|
++------------+-----------+
+
+Operation top-country on file 'Tweets_1m.json' finished in 8.575207606000001 seconds
+
++------------+-----------+
+|country_code|tweet_count|
++------------+-----------+
+|          US|     196740|
+|          JP|     133690|
+|          GB|      65130|
+|          PH|      57320|
+|          BR|      44570|
++------------+-----------+
+
+Operation top-country on file 'tweets.json' finished in 7.436740006000001 seconds
+
++------------+-----------+
+|country_code|tweet_count|
++------------+-----------+
+|          US|     196740|
+|          JP|     133690|
+|          GB|      65130|
+|          PH|      57320|
+|          BR|      44570|
++------------+-----------+
+
+Operation top-country on file 'tweets.parquet' finished in 5.114391074 seconds
 
 * (Q15) Do you see clear gap of running time? Explain your answer based on your results.
 
@@ -234,10 +275,10 @@ Operation top-lang on file 'tweets.json' finished in 0.9592505830000001 seconds
     | Command               | Tweets_1m.json | tweets.json | tweets.parquet  |
     |-----------------------|----------------|-------------|-----------------|
     | top-country           |                |             |                 |
-    | top-lang              |                |             |                 |
-    | top-country-with-lang |                |             |                 |
-    | corr                  |                |             |                 |
-    | top-hashtags          |       N/A      |             |                 |
+    | top-lang              |7.400606643000001|3.61266533 secs| 5.246391087 secs|
+    | top-country-with-lang |10.441671391 sec|7.520774422000001|8.520390547 sec|
+    | corr               |6.985792780000001|3.5848557690000002| 4.575929706 secs|
+    | top-hashtags          |       N/A      |  4.597116864| 5.421065807000001|
 
 * (Q17) Does parquet provided you with the lowest running time for all tasks on 1M Tweets dataset? Explain why based on your results.
 
