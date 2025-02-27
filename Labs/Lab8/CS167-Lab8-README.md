@@ -164,12 +164,64 @@ Operation top-lang on file 'tweets.json' finished in 0.9592505830000001 seconds
 
 
 * (Q10) For the country with the most tweets, what is the fifth most used language? Also, copy the entire output table here.
+* US with ja (Japanese) at fifth most used language
+* +-------+------------+----+------------+
+|country|tweets_count|lang|lang_percent|
++-------+------------+----+------------+
+|     US|           1|  en|     16910.0|
+|     US|           1| und|      1704.0|
+|     US|           1|  es|       275.0|
+|     US|           1|  tl|       134.0|
+|     US|           1|  ja|        84.0|
+|     JP|           1|  ja|     12718.0|
+|     JP|           1| und|       223.0|
+|     JP|           1|  en|       208.0|
+|     JP|           1|  in|        67.0|
+|     JP|           1|  th|        27.0|
+|     GB|           1|  en|      5811.0|
+|     GB|           1| und|       458.0|
+|     GB|           1|  es|        30.0|
+|     GB|           1|  fr|        29.0|
+|     GB|           1|  ar|        26.0|
+|     PH|           1|  tl|      2916.0|
+|     PH|           1|  en|      2001.0|
+|     PH|           1| und|       393.0|
+|     PH|           1|  in|       161.0|
+|     PH|           1|  es|        47.0|
+|     BR|           1|  pt|      3905.0|
+|     BR|           1| und|       210.0|
+|     BR|           1|  en|       134.0|
+|     BR|           1|  es|        96.0|
+|     BR|           1|  it|        23.0|
++-------+------------+----+------------+
+
 
 * (Q11) Does the observed statistical value show a strong correlation between the two columns? Note: a value close to 1 or -1 means there is high correlation, but a value that is close to 0 means there is no correlation.
-
+* 0.05958391887410892
+* Very weak to no correlation
+  
 * (Q12.1) What are the top 10 hashtags? Copy paste your output here.
+* +-------------------+-----+
+|                tag|count|
++-------------------+-----+
+|     ALDUBxEBLoveis|  411|
+|                job|  273|
+|             trndnl|  242|
+|ShowtimeLetsCelebr8|  220|
+|             Hiring|  208|
+|       FurkanPalalı|  113|
+|              no309|  113|
+|              LalOn|  113|
+|            sbhawks|  105|
+|             hiring|  100|
++-------------------+-----+
 
 * (Q12.2) For this operation, do you observe difference in performance when comparing the two different input files `tweets.json` and `tweets.parquet`? Explain the reason behind the difference.
+* JSON seems to be more efficient for exploding arrays and the hashtags are probably a smaller dataset
+* Spark may load more data from Parquet than from JSON because of columns
+* Operation top-hashtags on file 'tweets.parquet' finished in 1.8565072500000002 seconds
+* Operation top-hashtags on file 'tweets.json' finished in 1.2822350420000002 seconds
+
 
 * (Q13) What's the total size of `tweets.json` and `tweets.parquet` in HDFS?
 
