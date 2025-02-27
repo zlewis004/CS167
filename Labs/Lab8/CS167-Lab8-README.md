@@ -223,15 +223,17 @@ Operation top-lang on file 'tweets.json' finished in 0.9592505830000001 seconds
 * Operation top-hashtags on file 'tweets.json' finished in 1.2822350420000002 seconds
 
 
-* (Q13) What's the total size of `tweets.json` and `tweets.parquet` in HDFS?
-* cs167@class-199:~/cs167$  hdfs dfs -du -s -h tweets.json
+* (Q13) What's the total size of `tweets.json` and `tweets.parquet` in HDFS
+* -total size 927.8 M  tweets.json from 2 datanodes in spark
+* -total size 313.7 M  tweets.parquet with 2 datanodes in spark
+
 309.3 M  927.8 M  tweets.json
-cs167@class-199:~/cs167$  hdfs dfs -du -s -h tweets.parquet
 104.6 M  313.7 M  tweets.parquet
-cs167@class-199:~/cs167$ 
+
+-number may change depending on the number of times data bis replicated
 
 * (Q14) Copy the output to this question. Which one runs faster? Explain why.
-
+* tweets.parquet' finished fastest because it has a much smaller size and it has the columnar structure so it makes queries fatser.
 +------------+-----------+
 |country_code|tweet_count|
 +------------+-----------+
@@ -269,16 +271,20 @@ Operation top-country on file 'tweets.json' finished in 7.436740006000001 second
 Operation top-country on file 'tweets.parquet' finished in 5.114391074 seconds
 
 * (Q15) Do you see clear gap of running time? Explain your answer based on your results.
+* Yes, there is a clear performance gap between JSON and Parquet because parquet is Columnar and JSON is Row-Based,so it doesnt need to read through every column. its simply faster overall and works better with bigger datasets.
 
 * (Q16) Fill-in the table with the running of your code in your spark cluster, and copy the table here.
 
     | Command               | Tweets_1m.json | tweets.json | tweets.parquet  |
     |-----------------------|----------------|-------------|-----------------|
-    | top-country           |                |             |                 |
+    | top-country           |8.575207606000001|7.436740006000001 | 5.114391074 |
     | top-lang              |7.400606643000001|3.61266533 secs| 5.246391087 secs|
     | top-country-with-lang |10.441671391 sec|7.520774422000001|8.520390547 sec|
     | corr               |6.985792780000001|3.5848557690000002| 4.575929706 secs|
     | top-hashtags          |       N/A      |  4.597116864| 5.421065807000001|
 
 * (Q17) Does parquet provided you with the lowest running time for all tasks on 1M Tweets dataset? Explain why based on your results.
+* No, Parquet doesn't have the lowest running time for all tasks on the 1M Tweets dataset because parquet is the best for structured, column-based queries like top-country but JSON performs better nested structures and small row-based operations, like the ones mentioned:
+Exploding arrays: top-lang, top-hashtags
+Correlation–corr
 
