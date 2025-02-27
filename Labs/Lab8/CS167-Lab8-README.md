@@ -10,7 +10,11 @@
 ## Answers
 
 * (Q1) What is the nesting level of this column `root.entities.hashtags.element.text`?
-
+* root is Level 0.
+* -entities is Level 1.
+* -hashtags is Level 2.
+* element (inside hashtags) does not increase the level.
+* -text inside element is Level 3.
 * (Q2) In Parquet, would this field be stored as a repeated column? Explain your answer.
 
 * (Q3) Based on this schema answer the following:***
